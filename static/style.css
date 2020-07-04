@@ -1,4 +1,5 @@
 
+
 body{
     margin-top:5vh;
     text-align:center;
@@ -6,21 +7,13 @@ body{
     color:white;
     background-image:url('./images/cov.jpg');
     background-position: center;
-    /*display:grid;
-    grid-template-areas:
-    "main"
-    "result"
-    "footer";
-    grid-gap : 10vh;*/
-    display:flex;
-    justify-content: space-between;
-    flex-direction:column;
 }
 
 
 h1{
+    grid-area: heading;
     color: white;
-    font-size: 7vw;
+    font-size: 6vw;
     font-family:'Eczar','Rubik',sans-serif;
     font-weight:bold;
     background: -webkit-linear-gradient(#fd2d00, #df007c);
@@ -30,10 +23,11 @@ h1{
     animation:fadeInDown;
     animation-delay :0.5s;
 
-    box-shadow:0px 0px 5px 5px rgba(255, 255, 255, 0.795);
+    /*box-shadow:0px 0px 5px 5px rgba(255, 255, 255, 0.795);*/
 
 }
 .form{
+    grid-area: main;
     display:grid;
     grid-gap:10vh;
     font-family: 'Roboto',sans-serif;
@@ -58,6 +52,7 @@ h1{
 
 
 .btn{
+    grid-area:button;
     margin: 8vh 5vw 10vh 5vw;
     padding:5vh 5vw;
     border-radius:20px;
@@ -66,6 +61,7 @@ h1{
 
 
 footer{
+    grid-area:footer;
     margin-top:30vh;
     grid-area:footer;
     background-color: saddlebrown;
@@ -79,10 +75,6 @@ footer{
     margin-bottom: 0;
 
 }
-.invisible{
-    display: none;
-}
-
 .back{
     grid-area: main;
     z-index: 1;

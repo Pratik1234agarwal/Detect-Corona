@@ -4,7 +4,6 @@
 AOS.init();
 
 
-
 // Global Variables
 
 const btn = document.querySelector('.btn');
@@ -13,6 +12,50 @@ const display = document.querySelector('.result');
 let missingAnimated = [];
 missingAnimated.push(ques[0]);
 missingAnimated.push(ques[1]);
+
+
+
+
+// Creating scrolling animations helper function 
+const screenHeight = window.innerHeight;
+const check = ele => {
+    const bound = ele.getBoundingClientRect();
+    if(bound.top < screenHeight*0.9 && bound.top >0){
+        return true;
+    }
+    else{
+        return false;
+    }
+
+}
+
+let tracker = []
+for(let j=0;j<ques.length;j++){
+    tracker.push(0);
+    
+}
+
+for(let j=2;j<ques.length;j++){
+    ques[j].classList.add('invisible');
+}
+
+document.addEventListener('scroll',()=>{
+    for(let i=2;i<ques.length;i++){
+        if(check(ques[i]) && tracker[i]==0){
+            ques[i].classList.remove('invisible');
+            let name = ' animate__animated';
+            
+            if(i%2==0){
+                name+=" animate__fadeInRight";
+            }
+            else{
+                name+=" animate__fadeInLeft";
+            }
+            ques[i].className+=name;
+            tracker[i]=1;
+        }
+    }
+});
 
 
 //post method to get the generate the result based on the input
