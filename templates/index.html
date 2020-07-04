@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Corona Detection</title>
+    <link rel = "icon" type = "image/png" href = "../static/images/virus.png">
     <link
-      href="https://fonts.googleapis.com/css?family=Cardo|Bangers|Carter One|Alegreya|Montserrat"
+      href="https://fonts.googleapis.com/css?family=Rubik|Cardo|Bangers|Carter One|Alegreya|Eczar|Roboto"
       rel="stylesheet"
     />
     <link
@@ -18,39 +19,41 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
     />
+    
+    <link rel="stylesheet" href="../static/aos.css" />
     <link rel="stylesheet" href="../static/style.css" />
   </head>
   <body>
-    <div class="back">
-      <h1 class='animate__animated animate__fadeInDown animate__delay-0.8s'>COVID-19 DETECTION</h1>
+
+      <h1 class="animate__animated">COVID-19 DETECTION</h1>
       <br />
       <div class="form">
-        <div class="q1 question">
-          <p>1. Are u suffering from Fever ?</p>
-          <div class="form-check form-check-inline">
+        <div class="q1 question animate__animated animate__fadeInLeft animate__delay-1s">
+          <p> Are u suffering from Fever ?</p>
+          <div class="form-check form-check-inline yes">
             <input
               class="form-check-input"
               type="radio"
               name="inlineRadioOptions1"
-              id="inlineRadio1"
+              id="inlineRadioq1_1"
               value="1"
             />
-            <label class="form-check-label" for="inlineRadio1">yes</label>
+            <label class="form-check-label" for="inlineRadioq1_1">yes</label>
           </div>
-          <div class="form-check form-check-inline">
+          <div class="form-check form-check-inline no">
             <input
               class="form-check-input"
               type="radio"
               name="inlineRadioOptions1"
-              id="inlineRadio2"
+              id="inlineRadioq1_2"
               value="0"
             />
-            <label class="form-check-label" for="inlineRadio2">no</label>
+            <label class="form-check-label" for="inlineRadioq1_2">no</label>
           </div>
         </div>
-        <div class="q2 question">
-          <p>2. Are You Suffering From Dry Cough ?</p>
-          <div class="form-check form-check-inline">
+        <div class="q2 question animate__animated animate__fadeInRight animate__delay-1s">
+          <p> Are You Suffering From Dry Cough ?</p>
+          <div class="form-check form-check-inline yes">
             <input
               class="form-check-input"
               type="radio"
@@ -60,7 +63,7 @@
             />
             <label class="form-check-label" for="inlineRadio1">yes</label>
           </div>
-          <div class="form-check form-check-inline">
+          <div class="form-check form-check-inline no">
             <input
               class="form-check-input"
               type="radio"
@@ -71,230 +74,243 @@
             <label class="form-check-label" for="inlineRadio2">no</label>
           </div>
         </div>
-        <div class="q1 question">
-          <p>3. Are You Suffering From Sore Throat ?</p>
-          <div class="form-check form-check-inline">
+        <div class="q3 question" data-aos='fade-right' data-aos-duration='1200'>
+          <p> Are You Suffering From Sore Throat ?</p>
+          <div class="form-check form-check-inline yes">
             <input
               class="form-check-input"
               type="radio"
               name="inlineRadioOptions3"
-              id="inlineRadio1"
+              id="inlineRadioq3_1"
               value="1"
             />
-            <label class="form-check-label" for="inlineRadio1">yes</label>
+            <label class="form-check-label" for="inlineRadioq3_1">yes</label>
           </div>
-          <div class="form-check form-check-inline">
+          <div class="form-check form-check-inline no">
             <input
               class="form-check-input"
               type="radio"
               name="inlineRadioOptions3"
-              id="inlineRadio2"
+              id="inlineRadioq3_2"
               value="0"
             />
-            <label class="form-check-label" for="inlineRadio2">no</label>
+            <label class="form-check-label" for="inlineRadioq3_2">no</label>
           </div>
         </div>
-        <div class="q1 question">
-          <p>4. Are You Suffering From Loss of Taste or Smell ?</p>
-          <div class="form-check form-check-inline">
+        <div class="q4 question" data-aos='fade-left'  data-aos-duration='1200'>
+          <p> Are You Suffering From Loss of Taste or Smell ?</p>
+          <div class="form-check form-check-inline yes">
             <input
               class="form-check-input"
               type="radio"
               name="inlineRadioOptions4"
-              id="inlineRadio1"
+              id="inlineRadioq4_1"
               value="1"
             />
-            <label class="form-check-label" for="inlineRadio1">yes</label>
+            <label class="form-check-label" for="inlineRadioq4_1">yes</label>
           </div>
-          <div class="form-check form-check-inline">
+          <div class="form-check form-check-inline no">
             <input
               class="form-check-input"
               type="radio"
               name="inlineRadioOptions4"
-              id="inlineRadio2"
+              id="inlineRadioq4_2"
               value="0"
             />
-            <label class="form-check-label" for="inlineRadio2">no</label>
+            <label class="form-check-label" for="inlineRadioq4_2">no</label>
           </div>
         </div>
-        <div class="q1 question">
-          <p>5. Are You Suffering From Tiredness ?</p>
-          <div class="form-check form-check-inline">
+        <div class="q5 question" data-aos='fade-right'  data-aos-duration='1200'>
+          <p> Are You Suffering From Tiredness ?</p>
+          <div class="form-check form-check-inline yes">
             <input
               class="form-check-input"
               type="radio"
               name="inlineRadioOptions5"
-              id="inlineRadio1"
+              id="inlineRadioq5_1"
               value="1"
             />
-            <label class="form-check-label" for="inlineRadio1">yes</label>
+            <label class="form-check-label" for="inlineRadioq5_1">yes</label>
           </div>
-          <div class="form-check form-check-inline">
+          <div class="form-check form-check-inline no">
             <input
               class="form-check-input"
               type="radio"
               name="inlineRadioOptions5"
-              id="inlineRadio2"
+              id="inlineRadioq5_2"
               value="0"
             />
-            <label class="form-check-label" for="inlineRadio2">no</label>
+            <label class="form-check-label" for="inlineRadioq5_2">no</label>
           </div>
         </div>
-        <div class="q1 question">
-          <p>6. Are you Suffering From Chest Pain or Pressure ?</p>
-          <div class="form-check form-check-inline">
+        <div class="q6 question" data-aos='fade-left'  data-aos-duration='1200'>
+          <p> Are you Suffering From Chest Pain or Pressure ?</p>
+          <div class="form-check form-check-inline yes">
             <input
               class="form-check-input"
               type="radio"
               name="inlineRadioOptions6"
-              id="inlineRadio1"
+              id="inlineRadioq6_1"
               value="1"
             />
-            <label class="form-check-label" for="inlineRadio1">yes</label>
+            <label class="form-check-label" for="inlineRadioq6_1">yes</label>
           </div>
-          <div class="form-check form-check-inline">
+          <div class="form-check form-check-inline no">
             <input
               class="form-check-input"
               type="radio"
               name="inlineRadioOptions6"
-              id="inlineRadio2"
+              id="inlineRadioq6_2"
               value="0"
             />
-            <label class="form-check-label" for="inlineRadio2">no</label>
+            <label class="form-check-label" for="inlineRadioq6_2">no</label>
           </div>
         </div>
-        <div class="q1 question">
-          <p>7. Are you Suffering From Breathing or Shortness of Breath ?</p>
-          <div class="form-check form-check-inline">
+        <div class="q7 question" data-aos='fade-right'  data-aos-duration='1200'>
+          <p> Are you Suffering From Breathing or Shortness of Breath ?</p>
+          <div class="form-check form-check-inline yes">
             <input
               class="form-check-input"
               type="radio"
               name="inlineRadioOptions7"
-              id="inlineRadio1"
+              id="inlineRadioq7_1"
               value="1"
             />
-            <label class="form-check-label" for="inlineRadio1">yes</label>
+            <label class="form-check-label" for="inlineRadioq7_1">yes</label>
           </div>
-          <div class="form-check form-check-inline">
+          <div class="form-check form-check-inline no">
             <input
               class="form-check-input"
               type="radio"
               name="inlineRadioOptions7"
-              id="inlineRadio2"
+              id="inlineRadioq7_2"
               value="0"
             />
-            <label class="form-check-label" for="inlineRadio2">no</label>
+            <label class="form-check-label" for="inlineRadioq7_2">no</label>
           </div>
         </div>
-        <div class="q1 question">
-          <p>8. Are you Suffering From Loss of Speech or Movement ?</p>
-          <div class="form-check form-check-inline">
+        <div class="q8 question" data-aos='fade-left'  data-aos-duration='1200'>
+          <p> Are you Suffering From Loss of Speech or Movement ?</p>
+          <div class="form-check form-check-inline yes">
             <input
               class="form-check-input"
               type="radio"
               name="inlineRadioOptions8"
-              id="inlineRadio1"
+              id="inlineRadioq8_1"
               value="1"
             />
-            <label class="form-check-label" for="inlineRadio1">yes</label>
+            <label class="form-check-label" for="inlineRadioq8_1">yes</label>
           </div>
-          <div class="form-check form-check-inline">
+          <div class="form-check form-check-inline no">
             <input
               class="form-check-input"
               type="radio"
               name="inlineRadioOptions8"
-              id="inlineRadio2"
+              id="inlineRadioq8_2"
               value="0"
             />
-            <label class="form-check-label" for="inlineRadio2">no</label>
+            <label class="form-check-label" for="inlineRadioq8_2">no</label>
           </div>
         </div>
-        <div class="q1 question">
-          <p>9. Are you Suffering From Congestion or Runny Nose ?</p>
-          <div class="form-check form-check-inline">
+        <div class="q9 question" data-aos='fade-right'  data-aos-duration='1200'>
+          <p> Are you Suffering From Congestion or Runny Nose ?</p>
+          <div class="form-check form-check-inline yes">
             <input
               class="form-check-input"
               type="radio"
               name="inlineRadioOptions9"
-              id="inlineRadio1"
+              id="inlineRadioq9_1"
               value="1"
             />
-            <label class="form-check-label" for="inlineRadio1">yes</label>
+            <label class="form-check-label" for="inlineRadioq9_1">yes</label>
           </div>
-          <div class="form-check form-check-inline">
+          <div class="form-check form-check-inline no">
             <input
               class="form-check-input"
               type="radio"
               name="inlineRadioOptions9"
-              id="inlineRadio2"
+              id="inlineRadioq9_2"
               value="0"
             />
-            <label class="form-check-label" for="inlineRadio2">no</label>
+            <label class="form-check-label" for="inlineRadioq9_2">no</label>
           </div>
         </div>
-        <div class="q1 question">
+        <div class="q10 question" data-aos='fade-left'  data-aos-duration='1200'>
           <p>
-            10. Do u have a International Travel History in last 1 Confirmed
-            days
+             Do u have a International Travel History in last 1 Confirmed
+            days?
           </p>
-          <div class="form-check form-check-inline">
+          <div class="form-check form-check-inline yes">
             <input
               class="form-check-input"
               type="radio"
               name="inlineRadioOptions10"
-              id="inlineRadio1"
+              id="inlineRadioq10_1"
               value="1"
             />
-            <label class="form-check-label" for="inlineRadio1">yes</label>
+            <label class="form-check-label" for="inlineRadioq10_1">yes</label>
           </div>
-          <div class="form-check form-check-inline">
+          <div class="form-check form-check-inline no">
             <input
               class="form-check-input"
               type="radio"
               name="inlineRadioOptions10"
-              id="inlineRadio2"
+              id="inlineRadioq10_2"
               value="0"
             />
-            <label class="form-check-label" for="inlineRadio2">no</label>
+            <label class="form-check-label" for="inlineRadioq10_2">no</label>
           </div>
         </div>
-        <div class="q1 question">
-          <p>11. Do you ever came in contact with a COVID-19 Patient</p>
-          <div class="form-check form-check-inline">
+        <div class="q11 question" data-aos='fade-right'  data-aos-duration='1200'>
+          <p> Do you ever came in contact with a COVID-19 Patient?</p>
+          <div class="form-check form-check-inline yes">
             <input
               class="form-check-input"
               type="radio"
               name="inlineRadioOptions11"
-              id="inlineRadio1"
+              id="inlineRadioq11_1"
               value="1"
             />
-            <label class="form-check-label" for="inlineRadio1">yes</label>
+            <label class="form-check-label" for="inlineRadioq11_1">yes</label>
           </div>
-          <div class="form-check form-check-inline">
+          <div class="form-check form-check-inline no">
             <input
               class="form-check-input"
               type="radio"
               name="inlineRadioOptions11"
-              id="inlineRadio2"
+              id="inlineRadioq11_2"
               value="0"
             />
-            <label class="form-check-label" for="inlineRadio2">no</label>
+            <label class="form-check-label" for="inlineRadioq11_2">no</label>
           </div>
         </div>
       </div>
-      <button type="button" class="btn btn-primary btn-lg">Evaluate</button>
-    </div>
-    <div class="back1 invisible"></div>
-    <div class="result"></div>
-    <footer>
-      This is a footer
+      <button type="button" class="btn btn-outline-primary btn-lg">Evaluate</button>
+    
+    <div class="result p-5 invisible"></div>
+    <footer class='align-bottom'>
+      <em><p class="align-middle text-center">
+        Designed and Developed by
+        <strong>
+        <a
+          href="https://www.linkedin.com/in/shruti-gupta13/"
+          >Shruti Gupta</a
+        >
+        </strong>
+        and
+        <strong>
+        <a
+          href="https://www.linkedin.com/in/subhadeep-mondal05/"
+          >Subhadeep Mondal</a
+        ><strong>
+      </p></em>
     </footer>
-    <script src="../static/main.js"></script>
-    <script
+    
+    <!--<script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
       crossorigin="anonymous"
-    ></script>
+    ></script>-->
     <script
       src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
       integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
@@ -305,5 +321,7 @@
       integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
       crossorigin="anonymous"
     ></script>
+    <script src="../static/aos.js"></script>
+    <script src="../static/main.js"></script>
   </body>
 </html>

@@ -20,12 +20,7 @@ def home():
 @app.route("/detect",methods=['POST'])
 def process():
     res = request.get_json(force=True)
-    print(res)
-    #res = request.json()
-    #print(res)
     array = res['data']
-    print(array)
-    
     result = evaluate(array)
     return jsonify({'message':result})
 

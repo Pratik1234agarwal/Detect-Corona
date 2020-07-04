@@ -4,46 +4,50 @@ body{
     text-align:center;
     background-color: #444;
     color:white;
-    background-image:url('cov.jpg');
-    display:grid;
+    background-image:url('./images/cov.jpg');
+    background-position: center;
+    /*display:grid;
     grid-template-areas:
     "main"
     "result"
     "footer";
-    grid-gap : 10vh;
-    justify-items:center;
-    height:100%;
+    grid-gap : 10vh;*/
+    display:flex;
+    justify-content: space-between;
+    flex-direction:column;
 }
 
 
 h1{
     color: white;
-    font-size: 6vw;
-    font-family: 'Montserrat',sans-serif;
-    font-weight:bolder;
+    font-size: 7vw;
+    font-family:'Eczar','Rubik',sans-serif;
+    font-weight:bold;
     background: -webkit-linear-gradient(#fd2d00, #df007c);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-family:sans-serif;
+
+    animation:fadeInDown;
+    animation-delay :0.5s;
+
+    box-shadow:0px 0px 5px 5px rgba(255, 255, 255, 0.795);
+
 }
 .form{
     display:grid;
     grid-gap:10vh;
-    font-family: 'Alegreya',sans-serif;
+    font-family: 'Roboto',sans-serif;
     color:#444;
-    font-weight:bold;
     margin:5vh;
-    font-size:4vh;
+    font-size:4.3vh;
+    margin-top:10vh;
 }
 
 .question{
     padding:10px;
-    background-color: #F34213;
-    border : 1px 0px 1px 0px solid red;
-    border-color:rgba(0,0,0,0.3);
-    border-top:1px solid rgba(0,0,0,0.3);
+    background-color: rgb(155, 17, 7);
     color:white;
-    box-shadow:0px 0px 5px 5px rgba(177, 253, 53, 0.377);
+    box-shadow:0px 0px 5px 5px rgba(243, 110, 33, 0.5);
 }
 
 .question:nth-child(even){
@@ -51,23 +55,30 @@ h1{
     color: white;
     box-shadow:0px 0px 5px 5px rgba(218, 65, 238, 0.3);
 }
+
+
 .btn{
     margin: 8vh 5vw 10vh 5vw;
+    padding:5vh 5vw;
     border-radius:20px;
+    font-size:3vw;
 }
 
 
 footer{
     margin-top:30vh;
-    width:100vw;
     grid-area:footer;
-    height:20vh;
     background-color: saddlebrown;
     text-align : center;
     padding:5vw;
+    font-size:2em;
+    font-family:'Rubik',sans-serif;
+    background-image: url('./images/header1.jpg');
+    background-size: cover;
+    background-position: center center;
+    margin-bottom: 0;
+
 }
-
-
 .invisible{
     display: none;
 }
@@ -86,14 +97,21 @@ footer{
 
 .result{
     grid-area:result;
-    width:60vw;
-    height:50vh;
     background-color: white;
-    border:1px solid red;
+    box-shadow: 0px 4px 8px 0px rgba(255,255,255,0.3);
     z-index:3;
     color:#c00;
-    font-size:4vh;
-    padding:10px;
+    font-size:10vh;
+    padding: 5px 10vw 5px 10vw;
+    margin : 0 5vw;
+}
+
+a{
+    color:white;
+}
+
+a:hover{
+    color:yellow;
 }
 
 
@@ -105,11 +123,12 @@ footer{
         font-size:15vw;
     }
     .btn{
-        padding:10vw;
-        font-size:7vw;
+        padding:5vw;
+        font-size:4vw;
     }
     .result{
-        height:20vh;
-        width:70vw;
+        padding: 5px 8vw 5px 8vw;
+        margin : 0 5vw 0 5vw;
+        font-size:10vw;
     }
 }
