@@ -1,9 +1,4 @@
 
-// AOS animation 
-
-AOS.init();
-
-
 // Global Variables
 
 const btn = document.querySelector('.btn');
@@ -20,7 +15,7 @@ missingAnimated.push(ques[1]);
 const screenHeight = window.innerHeight;
 const check = ele => {
     const bound = ele.getBoundingClientRect();
-    if(bound.top < screenHeight*0.9 && bound.top >0){
+    if(bound.top < screenHeight*0.8 && bound.top >0){
         return true;
     }
     else{
@@ -77,6 +72,8 @@ const postData = async(url,data={})=>{
 }
 
 
+
+// Handles the event of button click to fetch and display the result
 btn.addEventListener('click',async()=>{
     for(let i=0;i<missingAnimated.length;i++){
         //missingAnimated[i].classList.remove('animate__animated');
@@ -120,10 +117,12 @@ btn.addEventListener('click',async()=>{
             display.style.color = 'green';
         }
         else if(result.message ==='Confirmed'){
-            message = 'Confirmed Case'
+            message = 'Confirmed Case';
+            display.style.color = '8B0000';
         }
         else{
             message = 'You are in '+result.message;
+            display.style.color = 'red';
         }
 
         

@@ -4,7 +4,7 @@ import numpy as np
 
 
 model = load_model("COVID2.h5")
-print("Model Loadede successfully") 
+print("Model Loaded successfully") 
 
 
 
@@ -61,7 +61,9 @@ def evaluate(x):
 
 print("Testing model :")
 print(evaluate([0,0,0,1,1,1,0,1,0,0,0]))
-print("Model working fine")
+print("Model test successful")
+
+print(" \n The server is now ready  \n")
 
 if __name__ == '__main__':
     app.run(debug=True)
